@@ -1,0 +1,160 @@
+
+<meta https-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .bottom {
+        position: fixed;
+        z-index: 999999;
+        bottom: 0;
+        width: 100%;
+    }
+    .bottom button {
+        float: right;
+        width: 70px;
+        border: solid 1px #fff;
+        color: #fff;
+        background-color: #85d0ef;
+        padding: 2px;
+        font-size: 12px;
+    }
+    button:hover {
+        cursor: pointer;
+        color: red;
+    }
+    .bottom:hover {
+        cursor: pointer;
+    } 
+    @media screen and (min-width: 100px) {
+        
+        .mobile{
+            display: block;
+            width:100%;
+        }
+        .laptop{
+           display: none
+        }
+       .logo{
+            position: absolute;
+            top: 24%;
+            width: 19%;
+            left: 3%;
+        }
+        .text1{
+            position: absolute;
+            top: 28%;
+            width: 38%;
+            left: 25%;
+        }
+        .text2{
+            position: absolute;
+            top: 58%;
+            left: 22%;
+            width: 45%;
+        }
+        .present_footer{
+            position: fixed;
+            bottom: 0;
+            width: 36%;
+            left: 31.5%;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .logo{
+            top: 22%;
+        }
+        .text1{
+            top: 26%;
+        }
+    }
+    @media screen and (min-width: 960px) {
+        .bottom {
+            width: 50%;
+            left: 25%;
+        }
+        .bottom button {
+            width: 70px;
+            border: solid 1px #fff;
+            color: #fff;
+            background-color: #85d0ef;
+            font-size: 12px;
+        }
+        .mobile{
+            display: none;
+        }
+        .laptop{
+            display: block;
+            width: 100%;
+        }
+        .logo{
+            position: absolute;
+            top: 22%;
+            width: 15%;
+            left: 4%;
+        }
+        .text1{
+            position: absolute;
+            top: 23%;
+            width: 33%;
+            left: 23%;
+        }
+        .text2{
+            position: absolute;
+            top: 58%;
+            left: 20.5%;
+            width: 38%;
+        }
+
+    }
+    @media screen and (min-width: 1025px) {        
+    }
+</style>
+<div id="bottom" class="bottom catfish_meganet" style="display: none">
+    <button class="catfish_button" onclick="hide()">Close [x]</button>      
+        <img src="laptop.jpg" class="laptop" width="100%">
+        <img src="mobile.jpg" class="mobile" width="100%"> 
+        <!-- <img src="https://content.meganet.com.vn/resource/demo/ag/mgn/datxanh/catfish/logo.png" width="100%" class="logo" alt="">
+        <img src="https://content.meganet.com.vn/resource/demo/ag/mgn/datxanh/catfish/text1.png" width="100%" class="text1" alt="">
+        <img src="https://content.meganet.com.vn/resource/demo/ag/mgn/datxanh/catfish/text2.png" width="100%" class="text2" alt=""> -->
+          
+</div>
+<script type="text/javascript" src="https://content.meganet.com.vn/resource/demo/agency/isobar/standard/standard_1/js/jquery-3.2.1.min.js"></script>    
+<script type="text/javascript">
+    var myArray = ['bottom', 'bottom'];
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    var linkTracking = "";
+
+    function timeOutCatfish(){
+        setTimeout(function(){
+            $(".catfish_meganet").hide();
+        }, 15000);
+    }
+    if(rand == 'fullscreen'){
+        $("#fullscreen").fadeIn(2000, function(){
+            timeOutCatfish();
+        });
+        // linkTracking = m.urlFor('click', {
+        //     redirect: "https://portal.meganet.com.vn/template/5ad447ef19843334d8c7f7d1/index.html"
+        // });
+        linkTracking = "http://www.mobifone.vn/wps/portal/public/dich-vu/quoc-te/quoc-te-chi-tiet/thue-bao-mobifone-ra-nuoc-ngoai";
+    } else {
+        $("#bottom").fadeIn(2000, function(){
+            timeOutCatfish();
+        });
+        // linkTracking = m.urlFor('click', {
+        //     redirect: "https://portal.meganet.com.vn/template/5ad447ef19843334d8c7f7d1/index.html"
+        // });
+        linkTracking = "http://www.mobifone.vn/wps/portal/public/dich-vu/quoc-te/quoc-te-chi-tiet/thue-bao-mobifone-ra-nuoc-ngoai";
+    }
+    function hide(){
+        $(".catfish_meganet").hide();
+    }
+    $(".catfish_meganet").click(function(e){
+        if (e.target && e.target.tagName != 'BUTTON') {
+            window.location = linkTracking;
+        }
+    });
+</script>
